@@ -29,7 +29,7 @@
   "}
   # -serial telnet::4555,server,nowait \
 
-: ${KVM_CPU_OPTS:="-m 1024 -smp 4,sockets=4,cores=1,threads=1"}
+: ${KVM_CPU_OPTS:="-m 4G -smp 2"}
 
 log () {
   case "$1" in
