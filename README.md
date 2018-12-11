@@ -1,5 +1,17 @@
 
 ## Forked for ConnectUS
+First "docker build -t connectus/kvm ." then to deploy:
+
+```
+$ docker run                                     \
+      --name Exchange-VM                         \
+      -td                                        \
+      --privileged                               \
+      -v /path_to/image_file.qcow2:/image/image  \
+      -e AUTO_ATTACH=yes                         \
+      -p 5900:5900                               \
+      connectus/kvm:latest
+```
 Original ReadMe below:
 
 # Docker KVM simple container
