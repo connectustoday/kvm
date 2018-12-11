@@ -259,7 +259,7 @@ configureNetworks () {
 
     setupDhcp
     log "DEBUG" "bridgeName: $bridgeName"
-    KVM_NET_OPTS=" -device e1000,netdev=net$i,mac=$MAC $KVM_NET_OPTS"
+    KVM_NET_OPTS=" -device rtl8139,netdev=net$i,mac=$MAC $KVM_NET_OPTS"
     let i++
 
   done
